@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 - 함수2</title>
+    <style>
+        .box {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>숨기기 이벤트</h1>
+    <hr>
+
+    <button onclick="hide1()">display로 숨기기</button>
+    <button onclick="hide2()">visible로 숨기기</button>
+
+    <div class="box">
+        <div id="b1" class="box">내부박스1</div>
+        <div id="b2" class="box">내부박스2</div>
+    </div>
+
+    <script>
+        function hide1() {
+            let btn = document.querySelector("#b1");
+            btn.style.display = "none";
+            console.log("hide1");
+        }
+        function hide2() {
+            let btn = document.querySelector("#b2");
+            btn.style.visibility = "hidden";
+            console.log("hide2");
+        }
+    </script>
+</body>
+
+</html>

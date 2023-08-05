@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 - 함수</title>
+</head>
+
+<body>
+    <script>
+        // 자바에서는 최상위 객체가 class
+        // 클래스 안에 없으니까 메서드가 아니라 함수임
+        // let add = function (n1, n2) { // 1급 객체 ㅡ> 최상위 객체
+        //     return n1 + n2;
+        // }
+        // let result = add(1,2);
+        // alert(result);
+
+        // 함수를 변수에 담는 것은 5버전에서도 가능
+        // 함수에 이름이 없으면 익명함수
+        // 함수에 이름이 없으면 그냥함수
+
+        // 람다 함수
+        // let add = (n1, n2) => {
+        //     return n1 + n2;
+        // }
+
+        // 간결하게 가능
+        let add = (n1, n2) => n1 + n2;
+        // 리턴안해도 가능
+        let minus = (n1, n2) => conosle.log(n1 - n2);
+
+        let result = add(1, 2);
+        alert(result);
+    </script>
+</body>
+
+</html>

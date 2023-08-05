@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트-객체</title>
+</head>
+
+<body>
+    <script>
+        let user = {
+            id: 1,
+            username: "ssar",
+            password: "1234"
+        };
+        // 자바에 클래스
+        // 자바스크립트는 객체
+
+        console.log("id", user.id);
+        console.log("username", user.username);
+        console.log("password", user.password);
+        console.log(user);
+
+        let board = {
+            id: 1,
+            title: "제목 1",
+            content: "내용 1",
+            user: user
+        };
+
+        console.log(board);
+
+        let data = JSON.stringify(board);
+        console.log(data);
+        // 자바스크립트를 JSON로 바꾸기
+
+        let data2 = JSON.parse(data);
+        console.log(data2);
+        // JSON을 자바스크립트로 바꾸기
+
+        // 통신할 때 필요한 JSON은 중간언어임
+    </script>
+</body>
+
+</html>

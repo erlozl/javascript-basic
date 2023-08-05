@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element</title>
+    <style>
+        .red-text {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>box1</div>
+    <div>box2</div>
+    <div class="red-text">box3</div>
+    <div class="red-text">box4</div>
+    <div id="box5">box5</div>
+    <div id="err"></div>
+    <hr />
+    <button onclick="tagChange()">태그찾기</button>
+    <button onclick="classChange()">클래스찾기</button>
+    <button onclick="idChange()">아이디찾기</button>
+    <button onclick="err()">에러</button>
+
+    <script>
+        function err() {
+            let errEl = document.querySelector("#err");
+            console.log(errEl);
+            errEl.innerHTML = "아이디 혹은 비밀번호를 잘못적음";
+        }
+        function tagChange() {
+            let tagEl = document.querySelectorAll("div");
+            console.log(tagEl[0]); // <div>box1</div>
+            console.log(tagEl.length); // 5
+            console.log(tagEl[5]); // undifined
+
+            tagEl[0].innerHTML = "<h3>태그변경</h3>";
+            tagEl[1].textContent = "<h3>태그변경</h3>";
+            tagEl[2].textContent = "태그변경";
+            tagEl[3].textContent = "태그변경";
+            tagEl[4].textContent = "태그변경";
+            // textContent를 사용하면 태그가 안 먹힘
+            // innerHTML은 태그가 먹힘, html이 적용이 됨
+        }
+
+        function classChange() {
+            let classEl = document.querySelectorAll(".red-text");
+            for (let i = 0; i < classEl.length; i++) {
+                classEl[i].innerHTML = "class-for";
+            }
+            // classEl[0].textContent = "class 변경";
+            // classEl[1].textContent = "class 변경";
+        }
+
+        function idChange() {
+            let idEl = document.querySelector("#box5");
+            idEl.textContent = "id 변경";
+        }
+    </script>
+
+</body>
+
+</html>
